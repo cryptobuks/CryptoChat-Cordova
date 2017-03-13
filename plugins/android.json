@@ -1,0 +1,30 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-android-permissions": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        },
+        "org.awokenwell.proximity": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        },
+        "com.dooble.audiotoggle": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        }
+    },
+    "dependent_plugins": {}
+}

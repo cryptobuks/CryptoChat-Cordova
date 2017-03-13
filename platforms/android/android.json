@@ -1,0 +1,127 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Permissions\"><param name=\"android-package\" value=\"com.android.plugins.Permissions\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Proximity\"><param name=\"android-package\" value=\"org.awokenwell.proximity.ProximitySensorListener\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"YoikScreenOrientation\"><param name=\"android-package\" value=\"net.yoik.cordova.plugins.screenorientation.YoikScreenOrientation\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AudioTogglePlugin\"><param name=\"android-package\" value=\"com.dooble.audiotoggle.AudioTogglePlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.DEVICE_POWER\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-android-permissions": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        },
+        "org.awokenwell.proximity": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        },
+        "com.dooble.audiotoggle": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.cryptochat.app"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-android-permissions.Permissions",
+            "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+            "pluginId": "cordova-plugin-android-permissions",
+            "clobbers": [
+                "cordova.plugins.permissions"
+            ]
+        },
+        {
+            "id": "org.awokenwell.proximity.proximity",
+            "file": "plugins/org.awokenwell.proximity/www/proximity.js",
+            "pluginId": "org.awokenwell.proximity",
+            "clobbers": [
+                "navigator.proximity"
+            ]
+        },
+        {
+            "id": "cordova-plugin-screen-orientation.screenorientation",
+            "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+            "pluginId": "cordova-plugin-screen-orientation",
+            "clobbers": [
+                "cordova.plugins.screenorientation"
+            ]
+        },
+        {
+            "id": "cordova-plugin-screen-orientation.screenorientation.android",
+            "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.android.js",
+            "pluginId": "cordova-plugin-screen-orientation",
+            "merges": [
+                "cordova.plugins.screenorientation"
+            ]
+        },
+        {
+            "id": "com.dooble.audiotoggle.AudioToggle",
+            "file": "plugins/com.dooble.audiotoggle/www/audiotoggle.js",
+            "pluginId": "com.dooble.audiotoggle",
+            "clobbers": [
+                "AudioToggle"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-android-permissions": "0.10.0",
+        "cordova-plugin-whitelist": "1.3.2",
+        "org.awokenwell.proximity": "1.1.0",
+        "cordova-plugin-screen-orientation": "1.4.2",
+        "com.dooble.audiotoggle": "1.0.0",
+        "cordova-plugin-compat": "1.1.0"
+    }
+}
